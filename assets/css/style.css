@@ -1,0 +1,131 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+html {
+    font-family: "Roboto", sans-serif;
+}
+body .btn-click {
+    width: 600px;
+    margin-top: 5%;;
+    display: flex;
+    align-items: start;
+    flex-direction: column;
+}
+.btn {
+    min-width: 200px;
+    padding: 10px;
+    border-radius: 20px;
+    border: none;
+    margin-left: 50px;
+    color: white !important;
+    cursor: pointer;
+    box-shadow: 0px 0px 6px #e9e0e0;
+    margin-bottom: 20px;
+}
+.btn:active {
+    opacity: 0.8;
+}
+.btn--success {
+    background-color:#66B72C;
+    color: #66B72C;
+}
+.btn--warning {
+    background-color:#FFBB2A;
+    color: #FFBB2A;
+}
+.btn--error {
+    background-color:#FF5353;
+    color: #FF5353;
+}
+.btn--info {
+    background-color: #2F86EB;
+    color: #2F86EB;
+
+}
+.btn-disabled {
+    background-color: rgba(0, 0, 0, 0.3) !important;
+    opacity: 0.8 !important;
+    box-shadow: none !important;
+    cursor: not-allowed !important;
+}
+.list-toast {
+    position: fixed;
+    top: 32px;
+    right: 32px;
+    /* display: flex !important;
+    flex-direction: column !important; */
+}
+.toast {
+    position: relative;
+    background-color: #fff;
+    padding: 20px 0;
+    box-shadow: 1px 1px 10px #ccc;
+    border-radius: 5px;
+    border-left: 6px solid;
+    min-width: 450px;
+    max-width: 600px;
+    margin-bottom: 18px;
+    animation: rightToLeft 0.5s ease;
+    cursor: pointer;
+}
+.toast:hover {
+
+    opacity: 0.7 !important;
+}
+.toast__main {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+}
+@keyframes rightToLeft {
+    from {
+        opacity: 0;
+        transform: translateX(calc(100% + 32px));
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+.btn__icon {
+    margin: 0 18px;
+    font-size: 30px;
+    /* width: 100px; */
+    transform: translateY(4%);
+}
+.toast__body {
+    width: 350px;
+}
+.btn__close {
+    cursor: pointer;
+    margin: 0 18px;
+    font-size: 22px;
+    transform: translateY(2px);
+    opacity: 0.2;
+    color: black !important;
+}
+.btn__close:hover {
+    opacity: 1 !important;
+}
+.btn__msg {
+    line-height: 1.5;
+    margin-top: 4px;
+    font-size: 16px;
+    color: rgba(0, 0, 0, 0.68);
+    text-align: justify;
+}
+.btn__title {
+    font-size: 18px;
+}
+.toast .inline-execute {
+    position: absolute;
+    bottom: 0;
+    height: 3px;
+    background-color: red;
+    width: 100%;
+    background-color: #beafaf;
+}
